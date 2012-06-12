@@ -6,8 +6,10 @@
 </p>
 <p>
   <b>Name:</b>
-  <%= @document.name %>
+  <%= link_to @document.name,    'https://s3.amazonaws.com/liftsphere-assets/' + @document.name %>
 </p>
+
+<p>
 <%# 
 <p>
   <b> Size:</b>
