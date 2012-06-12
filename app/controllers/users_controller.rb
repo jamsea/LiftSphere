@@ -29,11 +29,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.find_by_name(params[:id])
-    
-    if @user.nil?
-      @user = User.find_by_id(params[:id])
-    end
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -53,11 +49,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.find_by_name(params[:id])
-    
-    if @user.nil?
-      @user = User.find_by_id(params[:id])
-    end
+    @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
