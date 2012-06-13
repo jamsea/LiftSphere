@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20120613160950) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "size"
-    t.datetime "modified"
+    t.string   "modified"
   end
 
   create_table "documents_users", :id => false, :force => true do |t|
